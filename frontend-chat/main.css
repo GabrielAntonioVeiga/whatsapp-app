@@ -1,0 +1,78 @@
+body {
+    height: 100%;
+    width: 100vw;
+    background: url('./background.jpg'); 
+} 
+
+form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input {
+    background-color: #2a3942;
+    border: none;
+    border-radius: 3rem;
+    color: lightgray;
+    height: 2rem;
+    outline: none;
+}
+  
+  input::placeholder {
+    color: lightgray;
+  }
+  
+  .display {
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+
+  span {
+      border: none;
+      border-radius: 1rem;
+      width: 200px;
+      margin: 15px;
+      padding: 15px;
+  }
+
+  span:nth-child(2n + 1)::after {
+      content: "";
+      display: block;
+      height: 25px;
+      width: 20px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+      background-color: black;
+      margin-left: 170px;
+      margin-bottom: -30px;
+      background-color: #0a332c;
+  }
+
+  span:nth-child(2n + 2)::after {
+    content: "";
+    display: block;
+    height: 25px;
+    width: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background-color: black;
+    margin-right: 170px;
+    margin-bottom: -30px;
+    background-color: gray;
+}
+  
+  span:nth-child(2n + 1) {
+    text-align: right;
+    background-color: #0a332c;
+    align-self: flex-end;
+  }
+  
+  span:nth-child(2n + 2) {
+      text-align: left;
+      background-color: gray;
+      align-self: flex-start;
+  }
